@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://mayocream.github.io/hugo-theme-kagami/"
 title = "Kagami Theme"
 author = "Mayo"
 paginate = 999
