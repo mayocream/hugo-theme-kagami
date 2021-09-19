@@ -24,7 +24,7 @@ jobs:
           extended: true
 
       - run: mkdir -p exampleSite/themes
-      - run: ln -sf $(pwd) $(pwd)/themes/kagami
+      - run: ln -sf $(pwd) $(pwd)/exampleSite/themes/kagami
       - name: Build
         run: hugo --minify --source=exampleSite
 
