@@ -7,13 +7,17 @@ main{border-top:1px solid orange}/*
 html {
   box-sizing: border-box; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit; }
 
 body {
   -webkit-font-smoothing: antialiased; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-font-smoothing: inherit; }
 
 h1,
@@ -44,9 +48,9 @@ textarea {
   resize: vertical; }
 
 button,
-[type="button"],
-[type="submit"],
-[type="reset"] {
+[type='button'],
+[type='submit'],
+[type='reset'] {
   background: transparent;
   border: 0;
   color: inherit;
@@ -61,9 +65,9 @@ button,
   -ms-user-select: none;
   user-select: none; }
   button::-moz-focus-inner,
-  [type="button"]::-moz-focus-inner,
-  [type="submit"]::-moz-focus-inner,
-  [type="reset"]::-moz-focus-inner {
+  [type='button']::-moz-focus-inner,
+  [type='submit']::-moz-focus-inner,
+  [type='reset']::-moz-focus-inner {
     padding: 0;
     border: 0; }
 
@@ -80,36 +84,36 @@ figure {
   padding: 0; }
 
 @font-face {
-  font-family: "Kagami SC";
+  font-family: 'Kagami SC';
   src: local("Songti SC Regular"), local(STSongti-SC-Regular);
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "Kagami SC";
+  font-family: 'Kagami SC';
   src: local("Songti SC Bold"), local(STSongti-SC-Bold);
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
-  font-family: "Kagami TC";
+  font-family: 'Kagami TC';
   src: local("Songti TC Regular"), local(STSongti-TC-Regular);
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "Kagami TC";
+  font-family: 'Kagami TC';
   src: local("Songti TC Bold"), local(STSongti-TC-Bold);
   font-weight: bold;
   font-style: normal; }
 
 :root {
-  --zh-font: 'Noto Sans SC', 'Kagami SC';
-  --zh-font-serif: 'Noto Serif SC', 'Kagami SC';
-  --ja-font: 'Noto Sans JP', 'YuMincho';
-  --ja-font-serif: 'Noto Serif JP', 'YuMincho';
-  --en-font: 'Roboto';
-  --en-font-serif: serif;
+  --zh-font: 'Noto Sans', 'Noto Sans SC', 'Kagami SC';
+  --zh-font-serif: 'Noto Sans Serif', 'Noto Serif SC', 'Kagami SC';
+  --ja-font: 'Noto Sans', 'Noto Sans JP', 'YuMincho';
+  --ja-font-serif: 'Noto Sans Serif', 'Noto Serif JP', 'YuMincho';
+  --en-font: 'Noto Sans', 'Roboto';
+  --en-font-serif: 'Noto Sans Serif';
   --mono-font: 'Source Code Pro'; }
 
 html {
@@ -129,13 +133,26 @@ body {
   padding-right: 16px; }
   @media screen and (min-width: 680px) {
     .wrapper {
-      padding-left: 54.4px;
-      padding-right: 54.4px; } }
-article h1, article h2, article h3, article h4, article h5, article h6, article p, article ul, article ol, article pre, article hr, article blockquote, article img:only-child {
+      padding-left: 48px;
+      padding-right: 48px; } }
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6,
+article p,
+article ul,
+article ol,
+article pre,
+article hr,
+article blockquote,
+article img:only-child {
   display: block;
   margin: 32px auto; }
 
-article li > ul, article li > ol {
+article li > ul,
+article li > ol {
   margin-top: 0;
   margin-bottom: 0; }
 
@@ -143,7 +160,7 @@ article .task-list-item {
   list-style-type: none; }
 
 article .task-list-item-checkbox {
-  margin: 0 .5em .3em -1.6em;
+  margin: 0 0.5em 0.3em -1.6em;
   vertical-align: middle; }
 
 article pre {
@@ -182,25 +199,48 @@ article blockquote {
     margin-top: -32px;
     white-space: nowrap; }
 
-article .aside, article .sidenote, article .side-note {
+article .aside,
+article .sidenote,
+article .side-note {
   width: 160px;
   float: left;
-  margin-left: -38.4px;
+  margin-left: -32px;
   margin-right: 32px;
   padding: 0; }
 
 @media screen and (max-width: 680px) {
-  article h2::before, article h3::before, article h4::before, article h5::before, article h6::before {
+  article h2::before,
+  article h3::before,
+  article h4::before,
+  article h5::before,
+  article h6::before {
     color: rgba(0, 0, 0, 0); }
-  article .aside, article .sidenote, article .side-note {
+  article .aside,
+  article .sidenote,
+  article .side-note {
     display: none; } }
 
 @media screen and (min-width: 680px) {
   article .hero-unit {
-    margin-left: -38.4px;
-    margin-right: -38.4px; } }
+    margin-left: -32px;
+    margin-right: -32px; } }
 
-article h1 + *, article h1 + .aside + *, article h1 + .sidenote + *, article h2 + *, article h2 + .aside + *, article h2 + .sidenote + *, article h3 + *, article h3 + .aside + *, article h3 + .sidenote + *, article h4 + *, article h4 + .aside + *, article h4 + .sidenote + *, article h5 + *, article h5 + .aside + *, article h5 + .sidenote + *, article h6 + *, article h6 + .aside + *, article h6 + .sidenote + * {
+article h1 + *, article h1 + .aside + *, article h1 + .sidenote + *,
+article h2 + *,
+article h2 + .aside + *,
+article h2 + .sidenote + *,
+article h3 + *,
+article h3 + .aside + *,
+article h3 + .sidenote + *,
+article h4 + *,
+article h4 + .aside + *,
+article h4 + .sidenote + *,
+article h5 + *,
+article h5 + .aside + *,
+article h5 + .sidenote + *,
+article h6 + *,
+article h6 + .aside + *,
+article h6 + .sidenote + * {
   margin-top: -8px; }
 
 .post-header {
@@ -210,7 +250,8 @@ article h1 + *, article h1 + .aside + *, article h1 + .sidenote + *, article h2 
 .post-cover {
   margin-top: -80px; }
 
-.post-footer, #disqus_thread {
+.post-footer,
+#disqus_thread {
   margin-top: 96px;
   margin-bottom: 96px; }
 
@@ -219,8 +260,8 @@ article h1 + *, article h1 + .aside + *, article h1 + .sidenote + *, article h2 
   flex-flow: row wrap;
   align-items: top;
   justify-content: center;
-  margin-left: -38.4px;
-  margin-right: -38.4px; }
+  margin-left: -32px;
+  margin-right: -32px; }
 
 @media screen and (min-width: 680px) {
   .site-nav {
@@ -283,21 +324,41 @@ article h1 + *, article h1 + .aside + *, article h1 + .sidenote + *, article h2 
     margin: 0;
     padding: 0; }
 
-[lang^="en"] {
+[lang|='en'] {
   line-height: 1.6;
   font-family: "Crimson Text", serif; }
 
-[lang^="zh-Hans"] {
+[lang|='zh'] {
   line-height: 1.8;
   font-family: "Crimson Text", var(--zh-font-serif), sans-serif; }
 
-[lang^="zh-Hant"] {
-  line-height: 1.8;
-  font-family: "Crimson Text", var(--zh-font-serif), sans-serif; }
-
-[lang^="ja"] {
+[lang|='ja'] {
   line-height: 1.8;
   font-family: "Crimson Text", var(--ja-font-serif), sans-serif; }
+
+.typeface-sans[lang|='en'] {
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+
+.typeface-sans[lang|='zh'] {
+  line-height: 1.8;
+  font-family: var(--zh-font), sans-serif; }
+
+.typeface-sans[lang|='ja'] {
+  line-height: 1.8;
+  font-family: var(--ja-font), sans-serif; }
+
+.typeface-sans [lang|='en'] {
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+
+.typeface-sans [lang|='zh'] {
+  line-height: 1.8;
+  font-family: var(--zh-font), sans-serif; }
+
+.typeface-sans [lang|='ja'] {
+  line-height: 1.8;
+  font-family: var(--ja-font), sans-serif; }
 
 body {
   color: #3c3c3c;
@@ -306,14 +367,22 @@ body {
   font-kerning: normal;
   border-top: 2px solid currentColor; }
 
-a, a:hover, a:visited {
+a,
+a:hover,
+a:visited {
   text-decoration: none;
   color: inherit; }
 
 img {
   max-width: 100%; }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   display: block; }
 
 h1 {
@@ -333,8 +402,12 @@ h4 {
 h5 {
   font-weight: bold; }
 
-article h2::before, article h3::before, article h4::before, article h5::before, article h6::before {
-  content: "#";
+article h2::before,
+article h3::before,
+article h4::before,
+article h5::before,
+article h6::before {
+  content: '#';
   display: inline-block;
   text-align: right;
   width: 90px;
@@ -343,22 +416,24 @@ article h2::before, article h3::before, article h4::before, article h5::before, 
   opacity: 0.08; }
 
 article h3::before {
-  content: "##"; }
+  content: '##'; }
 
 article h4::before {
-  content: "###"; }
+  content: '###'; }
 
 article h5::before {
-  content: "####"; }
+  content: '####'; }
 
 article h6::before {
-  content: "#####"; }
+  content: '#####'; }
 
 article p {
   hanging-punctuation: allow-end; }
 
-article .aside, article .sidenote, article .side-note {
-  font-size: .72em; }
+article .aside,
+article .sidenote,
+article .side-note {
+  font-size: 0.72em; }
 
 article em {
   font-style: italic; }
@@ -366,12 +441,14 @@ article em {
 article strong {
   font-weight: bold; }
 
-article a, article a:hover, article a:visited {
+article a,
+article a:hover,
+article a:visited {
   border-bottom: 1px dotted currentColor; }
 
 article ul,
 article ol {
-  padding-left: 2.0em; }
+  padding-left: 2em; }
 
 article ul {
   list-style-type: disc; }
@@ -392,8 +469,9 @@ article code {
   display: inline-block;
   padding: 0 0.3em;
   margin: 0 -0.05em;
-  font-size: 0.875em;
-  font-family: var(--mono-font), Courier, Monaco, monospace;
+  font-size: 0.785em;
+  font-weight: 400;
+  font-family: "JetBrains Mono", var(--mono-font), Courier, Monaco;
   color: #d32f2f;
   background: #fff6f6;
   border-radius: 3px; }
@@ -415,7 +493,9 @@ article hr {
   border-bottom: 1px solid #f0f0f0;
   width: 30%; }
 
-.site-title, .site-title:hover, .site-title:visited {
+.site-title,
+.site-title:hover,
+.site-title:visited {
   display: inline-block;
   font-variant-caps: all-petite-caps;
   font-size: 0.875em;
@@ -460,7 +540,7 @@ article hr {
   color: #bcbcbc;
   font-size: 0.875em; }
   .post-footer:after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
   .post-footer .post-meta {
@@ -530,24 +610,26 @@ article hr {
   transition: opacity 0.5s ease-out; }
 
 .cover-meta {
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
   font-variant-caps: all-petite-caps;
   font-size: 0.4em;
   color: #fff; }
 
-.site-title, .site-title:visited, .site-title:hover {
+.site-title,
+.site-title:visited,
+.site-title:hover {
   margin-left: 3px; }
 
-[lang^="zh"] .post-item-link {
+[lang^='zh'] .post-item-link {
   margin-left: -2px; }
 
-[lang^="zh"] h1 {
+[lang^='zh'] h1 {
   margin-left: -1px; }
 
-[lang^="zh"] h2 {
+[lang^='zh'] h2 {
   margin-left: -2px; }
 
-[lang^="zh"] h3 {
+[lang^='zh'] h3 {
   margin-left: -2px; }
 
 .baseline-fix {
@@ -557,6 +639,82 @@ article hr {
   display: inline-block;
   vertical-align: top;
   font-size: 0.95em; }
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold-Italic.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Bold-Italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-ExtraBold-Italic.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-ExtraBold-Italic.woff')
+      format('woff');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-ExtraBold.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Italic.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Medium-Italic.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Medium-Italic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Medium.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 /**
  * Nord Theme Originally by Arctic Ice Studio
  * https://nordtheme.com
