@@ -24,7 +24,9 @@ jobs:
           extended: true
 
       - name: Build
-        run: make
+        run: mkdir exampleSite/themes && \
+             ln -sf $(pwd) $(pwd)/exampleSite/themes/kagami && \
+             hugo --minify --source=exampleSite
 
       - name: Deploy Pages
         uses: peaceiris/actions-gh-pages@v3
