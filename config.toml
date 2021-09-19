@@ -2,7 +2,7 @@ baseURL = "/"
 title = "Kagami Theme"
 author = "Mayo"
 paginate = 3
-languageCode = "zh"
+languageCode = "zh-Hans"
 DefaultContentLanguage = "en"
 
 [menu]
