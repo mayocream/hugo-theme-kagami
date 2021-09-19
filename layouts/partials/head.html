@@ -18,7 +18,7 @@
 
   {{- $slice := slice }}
   
-  {{- $customCSS := resources.Get "custom.css" }}
+  {{- $customCSS := resources.Get "scss/custom.scss" | resources.ToCSS }}
   {{- if $customCSS }}
   {{- $slice = $slice | append ($customCSS | resources.Minify) }}
   {{- end }}
