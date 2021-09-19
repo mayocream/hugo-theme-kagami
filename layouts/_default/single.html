@@ -1,2 +1,27 @@
 {{ define "main" }}
+<article class="post" lang="{{ .Params.lang | default $.Site.LanguageCode | default "en" }}" itemscope itemtype="http://schema.org/BlogPosting" >
+    
+    <div class="post-content" itemprop="articleBody">
+        {{ .Content }}
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">{{ .Date | time.Format ":date_medium" }}</time>
+          {{ if .Params.author }} by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ .Params.author }}</span></span> {{ end }}
+        </div>
+    
+        {{- if .Params.tags }}
+        <ul class="post-tags" aria-label="TagList">
+            {{- range (.GetTerms "tags") }}
+            <li><a class="tag-link" href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+            {{- end }}
+        </ul>
+        {{- end}}
+
+    </footer>
+
+</article>
+{{- partial "retina-image" . }}
+{{- partial "mermaid" . }}
 {{ end }}

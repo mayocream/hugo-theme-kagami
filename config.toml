@@ -5,13 +5,19 @@ paginate = 3
 languageCode = "zh-Hans"
 DefaultContentLanguage = "en"
 
-[menu]
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
 
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 10
+[[menu.main]]
+name = "Posts"
+url = "/posts/"
+weight = 1
+
+[params.social]
+github = "https://github.com"
+twitter = "https://twitter.com"
 
 [taxonomies]
 tag = "tags"

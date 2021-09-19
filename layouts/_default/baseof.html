@@ -5,13 +5,10 @@
 <body>
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
+      {{- partial "site-nav" . }}
       {{- partial "header" . }}
       {{- block "main" . }}{{ end }}
     </div>
-    <!-- {% include retina-image.html %}
-    {% if site.mermaid or page.mermaid %}
-    {% include mermaid.html %}
-    {% endif %} -->
   </main>
   {{- partial "footer" . }}
   {{- partial "font-fix" . }}

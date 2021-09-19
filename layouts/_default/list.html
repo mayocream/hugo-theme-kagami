@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{- range .Paginator.Pages }}
+<ul class="post-list">
+    <li class="post-list-item">
+        {{- if .Params.cover_url }}
+        <div class="post-item-cover" style="background-image: url('.Params.cover_url')"></div>
+        {{- end }}
+        <div class="post-item-label">
+            <a class="post-item-link baseline-fix" href="{{ .Permalink }}">
+                {{ .Title }}
+            </a>
+            {{- if ne .Description "" }}
+            <p class="post-description">{{ .Description }}</p>
+            {{- end }}
+            <div class="post-item-meta">
+                {{ .Date | time.Format ":date_long" }}
+                /
+                {{ .ReadingTime }} minute read
+            </div>
+        </div>
+    </li>
+</ul>
+{{- end }}
+{{ end }}

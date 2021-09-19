@@ -1,0 +1,5 @@
+<nav class="site-nav">
+    {{- range (.Site.Menus.main) }}
+    <a class="page-link" href="{{ .URL | safeURL }}" >{{ .Name }}</a>
+    {{- end }}
+</nav>
