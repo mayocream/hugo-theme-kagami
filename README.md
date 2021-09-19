@@ -1,2 +1,3 @@
 # kagami
-My fork of kagami theme.
+
+Kagami theme for Hugo 
