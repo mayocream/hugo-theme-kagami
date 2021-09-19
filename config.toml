@@ -5,19 +5,24 @@ paginate = 3
 languageCode = "zh-Hans"
 DefaultContentLanguage = "en"
 
+[params]
+description = 'Text about my cool site'
+title = 'My cool site'
+
+[params.social]
+github = "https://github.com"
+twitter = "https://twitter.com"
+
 [[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 2
+name = "About"
+url = "/about/"
+weight = 2
 
 [[menu.main]]
 name = "Posts"
 url = "/posts/"
 weight = 1
 
-[params.social]
-github = "https://github.com"
-twitter = "https://twitter.com"
-
 [taxonomies]
 tag = "tags"
+series = "series"
