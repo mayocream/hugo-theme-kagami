@@ -1,15 +1,43 @@
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700|Press+Start+2P');
 
+@font-face {
+  font-family: "Kagami SC";
+  src: local("Songti SC Regular"), local(STSongti-SC-Regular);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kagami SC";
+  src: local("Songti SC Bold"), local(STSongti-SC-Bold);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kagami TC";
+  src: local("Songti TC Regular"), local(STSongti-TC-Regular);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kagami TC";
+  src: local("Songti TC Bold"), local(STSongti-TC-Bold);
+  font-weight: bold;
+  font-style: normal;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&family=Noto+Sans+SC:wght@100;300;400&family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+SC&family=Source+Code+Pro&display=swap');
 
 :root {
-  --zh-font: 'Noto Sans SC', sans-serif;
-  --zh-font-serif: 'Noto Serif SC', serif;
-  --ja-font: 'Noto Sans JP', sans-serif;
-  --ja-font-serif: 'Noto Serif JP', serif;
-  --en-font: 'Roboto', sans-serif;
+  --zh-font: 'Noto Sans SC', 'Kagami SC';
+  --zh-font-serif: 'Noto Serif SC', 'Kagami SC';
+  --ja-font: 'Noto Sans JP', 'YuMincho';
+  --ja-font-serif: 'Noto Serif JP', 'YuMincho';
+  --en-font: 'Roboto';
   --en-font-serif: serif;
-  --mono-font: 'Source Code Pro', inherit, monospace;
+  --mono-font: 'Source Code Pro';
 }
 
 @mixin font-sans {
