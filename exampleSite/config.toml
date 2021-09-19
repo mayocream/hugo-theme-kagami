@@ -4,6 +4,8 @@ author = "Mayo"
 paginate = 999
 languageCode = "zh-Hans"
 DefaultContentLanguage = "en"
+hasCJKLanguage = true
+theme = "kagami"
 
 [params]
 mainSections = ["posts"]
