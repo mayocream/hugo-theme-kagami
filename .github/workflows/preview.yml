@@ -23,10 +23,10 @@ jobs:
           hugo-version: '0.88.1'
           extended: true
 
+      - run: mkdir -p exampleSite/themes
+      - run: ln -sf $(pwd) $(pwd)/themes/kagami
       - name: Build
-        run: mkdir -p exampleSite/themes/kagami && \
-             cp -r . exampleSite/themes/kagami && \
-             hugo --minify --source=exampleSite
+        run: hugo --minify --source=exampleSite
 
       - name: Deploy Pages
         uses: peaceiris/actions-gh-pages@v3
