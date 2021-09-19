@@ -1,4 +1,4 @@
-.darkmode--activated{background-color:#000}.darkmode--activated .post-item-link{color:#999}.darkmode--activated pre,.darkmode--activated img{opacity:.9}body{opacity:0;transition:opacity 1s}/*
+.darkmode--activated{background-color:#000}.darkmode--activated .post-item-link{color:#999}.darkmode--activated pre,.darkmode--activated img{opacity:.9}body{opacity:0;transition:opacity 1s}img.emoji{height:1em;width:1em;margin:0 .05em 0 .1em;vertical-align:-.1em}/*
 * Scut, a collection of Sass utilities
 * to ease and improve our implementations of common style-code patterns.
 * v1.4.0
