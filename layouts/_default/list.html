@@ -1,5 +1,12 @@
 {{ define "main" }}
-{{- range (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+{{- $pages := union .RegularPages .Sections }}
+
+{{- if .IsHome }}
+{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- end }}
+
+{{- $paginator := .Paginate $pages }}
+{{- range $paginator.Pages }}
 <ul class="post-list">
     <li class="post-list-item">
         {{- if .Params.cover_url }}
