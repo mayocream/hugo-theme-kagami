@@ -1,5 +1,5 @@
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script type="text/javascript">
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
   mermaid.init({ startOnLoad: true }, "pre code.language-mermaid", function () {
     const codeBlocks = document.querySelectorAll('code.language-mermaid');
     for (const codeBlock of codeBlocks) {
@@ -8,7 +8,9 @@
       const preBlock = codeBlock.parentNode;
       preBlock.style.border = 'none';
       preBlock.style.textAlign = 'center';
-      preBlock.style.backgroundColor = 'initial';
+      if (window.darkmode && !window.darkmode.isActivated()) {
+        preBlock.style.backgroundColor = 'initial';
+      }
     } 
   });
 </script>

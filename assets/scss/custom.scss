@@ -1,0 +1,13 @@
+.darkmode--activated {
+  background-color: #000;
+  .post-item-link {
+    color: #999;
+  }
+  pre, img {
+    opacity: .9;
+  }
+}
+body {
+  opacity: 0;
+  transition: opacity 1s;
+}
