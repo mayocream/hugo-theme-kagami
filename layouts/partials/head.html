@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Title -->
+    <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+    <!-- Meta -->
+    {{- if eq .Kind "page" }}
+    <meta name="description" content="{{ .Summary }}" />
+    <meta name="author" content="{{ .Params.Author | default .Site.Author.name }}" />
+    {{- else }}
+    <meta name="description" content="{{ .Site.Params.description }}" />
+    <meta name="author" content="{{ .Site.Author.name }}" />
+    {{- end }}
+    <!-- Styles -->
+    {{- $css := resources.Get "scss/kagami.scss" | resources.ToCSS }}
+    <link rel="stylesheet" href="{{ $css.Permalink }}" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <!-- Generator -->
+    {{- hugo.Generator }}
+    <!-- RSS -->
+    {{ range .AlternativeOutputFormats -}} {{ printf `
+    <link rel="%s" type="%s" href="%s" title="%s" />
+    ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
+    <!-- Misc -->
+    {{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }} {{- template
+    "_internal/google_analytics_async.html" . }} {{- template "_internal/opengraph.html" . }} {{- end }}
+    <!-- Javascript -->
+    {{ $js := resources.Get "js/main.js" | js.Build (dict "format" "esm") }}
+    <style>
+      body {
+        opacity: 0;
+        transition: opacity 1.5s;
+      }
+    </style>
+    <script>
+      window.inited = {
+        baseURL: '{{ .Site.BaseURL }}',
+        siteTitle: '{{ .Site.Title }}',
+        kind: '{{ .Kind }}',
+      }
+    </script>
+    <script src="https://unpkg.com/dayjs@1.10.6/dayjs.min.js"></script>
+    <script src="https://unpkg.com/markdown-it@12.2.0/dist/markdown-it.min.js"></script>
+    <script type="module" src="{{ $js.Permalink }}" defer></script>
+  </head>
+</html>
+<body>
+  <section>Loading...</section>
+</body>

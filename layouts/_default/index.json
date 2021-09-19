@@ -1,0 +1,16 @@
+{{- .Scratch.SetInMap "home" "title" .Title }}
+{{- .Scratch.SetInMap "home" "kind" .Kind }}
+{{- .Scratch.SetInMap "home" "baseURL" .Site.BaseURL }}
+{{- .Scratch.Add "pages" slice }}
+{{- range .Pages }}
+    {{- $.Scratch.Add "pages"
+       (dict  
+          "title" .Title 
+          "uri" .Permalink 
+          "tags" .Params.tags 
+          "summary" .Summary 
+        ) 
+    }}
+{{- end }}
+{{- .Scratch.SetInMap "home" "pages" (.Scratch.Get "pages") }}
+{{- .Scratch.Get "home" | jsonify (dict "indent" "  ")}}
