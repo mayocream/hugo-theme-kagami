@@ -4,8 +4,6 @@ main{border-top:1px solid orange}/*
 * v1.4.0
 * Docs at http://davidtheclark.github.io/scut
 */
-@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,700|Press+Start+2P");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&family=Noto+Sans+SC:wght@100;300;400&family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+SC&family=Source+Code+Pro&display=swap");
 html {
   box-sizing: border-box; }
 
