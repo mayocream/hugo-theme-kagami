@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tag-5 on Kagami Theme</title><link>/tags/tag-5/</link><description>Recent content in tag-5 on Kagami Theme</description><generator>Hugo -- gohugo.io</generator><language>zh-Hans</language><lastBuildDate>Tue, 30 Aug 2011 16:01:23 +0800</lastBuildDate><atom:link href="/tags/tag-5/index.xml" rel="self" type="application/rss+xml"/><item><title>Syntax Highlighting</title><link>/posts/syntax-highlighting/</link><pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate><guid>/posts/syntax-highlighting/</guid><description>&lt;pre>&lt;code class="language-js">function helloWorld () {
+alert(&amp;quot;Hello, World!&amp;quot;)
+}
+&lt;/code>&lt;/pre></description></item></channel></rss>
