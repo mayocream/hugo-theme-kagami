@@ -4,4 +4,6 @@
 
 Kagami theme for Hugo 
 
+Preview: [Live](https://mayocream.github.io/hugo-theme-kagami/)
+
 Origin: [kamikat/jekyll-theme-kagami](https://github.com/kamikat/jekyll-theme-kagami)
