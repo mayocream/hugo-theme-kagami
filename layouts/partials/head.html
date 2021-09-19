@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700|Press+Start+2P" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&family=Noto+Sans+SC:wght@100;300;400&family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+SC&family=Source+Code+Pro" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&family=Noto+Sans+JP:wght@300;400&family=Noto+Sans+SC:wght@300;400&family=Noto+Serif:wght@300;400&family=Noto+Serif+JP:wght@300;400&family=Noto+Serif+SC:wght@300;400&family=Source+Code+Pro:wght@300;400" rel="stylesheet"> 
 
   {{- $slice := slice }}
   {{- $customCSS := resources.Get "scss/custom.scss" | resources.ToCSS }}
@@ -28,6 +28,7 @@
   {{- end }}
   
   {{- $slice = $slice | append (resources.Get "scss/kagami.scss" | resources.ToCSS) }}
+  {{- $slice = $slice | append (resources.Get "css/jetbrains-mono.css") }}
   {{- $slice = $slice | append (resources.Get "css/prism.css") }}
   {{- $bundleCSS := $slice | resources.Concat "bundle.css" }}
   {{- $bundleCSS = printf "%s?v=%d" $bundleCSS.RelPermalink now.Unix }}

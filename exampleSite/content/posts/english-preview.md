@@ -6,10 +6,7 @@ draft: false
 tags: ["preview", "English", "tag-2"]
 categories: ["English"]
 author: "Michael Henderson"
-
-autoCollapseToc: true
-contentCopyright: '<a href="https://github.com/gohugoio/hugoBasicExample" rel="noopener" target="_blank">See origin</a>'
-
+typeface: serif
 ---
 
 ## Introduction

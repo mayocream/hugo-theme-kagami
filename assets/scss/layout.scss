@@ -1,5 +1,5 @@
 $content-padding: $spacing-unit / 2;
-$post-margin-width: 1.2 * $spacing-unit;
+$post-margin-width: 1 * $spacing-unit;
 $post-header-spacing: 3.5 * $spacing-unit;
 $post-footer-spacing: 3 * $spacing-unit;
 
@@ -31,12 +31,25 @@ article {
   $vspacing: $spacing-unit;
   $hspacing: $spacing-unit / 2;
 
-  h1, h2, h3, h4, h5, h6, p, ul, ol, pre, hr, blockquote, img:only-child {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  pre,
+  hr,
+  blockquote,
+  img:only-child {
     display: block;
     margin: $vspacing auto;
   }
 
-  li > ul, li > ol {
+  li > ul,
+  li > ol {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -46,7 +59,7 @@ article {
   }
 
   .task-list-item-checkbox {
-    margin: 0 .5em .3em -1.6em;
+    margin: 0 0.5em 0.3em -1.6em;
     vertical-align: middle;
   }
 
@@ -59,11 +72,11 @@ article {
       overflow-x: auto;
     }
 
-    @include exdent-horizontally($hspacing, "code");
-    @include exdent-vertically(0.5 * $vspacing, "code");
+    @include exdent-horizontally($hspacing, 'code');
+    @include exdent-vertically(0.5 * $vspacing, 'code');
 
     @media screen and (min-width: $content-width) {
-      @include exdent-horizontally(3 * $hspacing, "code");
+      @include exdent-horizontally(3 * $hspacing, 'code');
     }
   }
 
@@ -82,7 +95,9 @@ article {
     }
   }
 
-  .aside, .sidenote, .side-note {
+  .aside,
+  .sidenote,
+  .side-note {
     width: 160px;
     float: left;
     margin-left: -$post-margin-width;
@@ -91,10 +106,18 @@ article {
   }
 
   @media screen and (max-width: $content-width) {
-    h2, h3, h4, h5, h6 {
-      &::before { color: rgba(0,0,0,0); }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      &::before {
+        color: rgba(0, 0, 0, 0);
+      }
     }
-    .aside, .sidenote, .side-note {
+    .aside,
+    .sidenote,
+    .side-note {
       display: none;
     }
   }
@@ -106,12 +129,19 @@ article {
     }
   }
 
-  h1, h2, h3, h4, h5, h6 { // reduce spacing after headings
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    // reduce spacing after headings
     & + *,
     & + .aside + *,
-    & + .sidenote + * { margin-top: -0.5 * $hspacing; }
+    & + .sidenote + * {
+      margin-top: -0.5 * $hspacing;
+    }
   }
-
 }
 
 .post-header {
@@ -123,7 +153,8 @@ article {
   margin-top: -$post-header-spacing + $spacing-unit;
 }
 
-.post-footer, #disqus_thread {
+.post-footer,
+#disqus_thread {
   margin-top: $post-footer-spacing;
   margin-bottom: $post-footer-spacing;
 }
@@ -183,8 +214,8 @@ article {
 .post-item-cover {
   width: 100vw;
   position: absolute;
-  top: -.5 * $spacing-unit;
-  bottom: -.5 * $spacing-unit;
+  top: -0.5 * $spacing-unit;
+  bottom: -0.5 * $spacing-unit;
   margin-left: 50%;
   transform: translateX(-50%);
   background-size: cover;
@@ -205,5 +236,8 @@ article {
   bottom: 0;
   right: 0;
   margin: 4px 8px;
-  p { margin: 0; padding: 0; }
+  p {
+    margin: 0;
+    padding: 0;
+  }
 }

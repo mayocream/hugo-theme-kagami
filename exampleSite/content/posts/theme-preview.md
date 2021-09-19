@@ -6,10 +6,7 @@ tags: ["preview", "Theme preview", "tag-3"]
 categories: ["Theme preview", "category-2", "category-3"]
 
 weight: 10
-contentCopyright: MIT
 mathjax: true
-autoCollapseToc: true
-
 ---
 
 > Based on [MarkdownPreview test.md](https://github.com/facelessuser/MarkdownPreview/blob/master/examples/test.md).

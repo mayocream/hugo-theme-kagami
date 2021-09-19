@@ -6,9 +6,7 @@ draft: false
 tags: ["preview", "中文", "tag-1"]
 categories: ["中文"]
 author: "Wikipedia"
-
-contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank">Creative Commons Attribution-ShareAlike License</a>'
-
+typeface: serif
 ---
 
 >《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。

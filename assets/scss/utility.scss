@@ -1,4 +1,4 @@
-@mixin exdent-horizontally($size, $selector: "*") {
+@mixin exdent-horizontally($size, $selector: '*') {
   margin-left: -$size;
   margin-right: -$size;
   & > #{$selector} {
@@ -7,7 +7,7 @@
   }
 }
 
-@mixin exdent-vertically($size, $selector: "*") {
+@mixin exdent-vertically($size, $selector: '*') {
   margin-top: -$size;
   margin-bottom: -$size;
   & > #{$selector} {
@@ -15,4 +15,3 @@
     padding-bottom: $size;
   }
 }
-

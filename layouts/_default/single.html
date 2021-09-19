@@ -1,5 +1,5 @@
 {{ define "main" }}
-<article class="post" lang="{{ .Params.lang | default $.Site.LanguageCode | default "en" }}" itemscope itemtype="http://schema.org/BlogPosting" >
+<article class="post typeface-{{ .Params.typeface }}" lang="{{ .Params.lang | default $.Site.LanguageCode | default "en" }}" itemscope itemtype="http://schema.org/BlogPosting" >
     
     <div class="post-content" itemprop="articleBody">
         {{ .Content }}

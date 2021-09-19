@@ -1,65 +1,73 @@
 @font-face {
-  font-family: "Kagami SC";
-  src: local("Songti SC Regular"), local(STSongti-SC-Regular);
+  font-family: 'Kagami SC';
+  src: local('Songti SC Regular'), local(STSongti-SC-Regular);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Kagami SC";
-  src: local("Songti SC Bold"), local(STSongti-SC-Bold);
+  font-family: 'Kagami SC';
+  src: local('Songti SC Bold'), local(STSongti-SC-Bold);
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Kagami TC";
-  src: local("Songti TC Regular"), local(STSongti-TC-Regular);
+  font-family: 'Kagami TC';
+  src: local('Songti TC Regular'), local(STSongti-TC-Regular);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Kagami TC";
-  src: local("Songti TC Bold"), local(STSongti-TC-Bold);
+  font-family: 'Kagami TC';
+  src: local('Songti TC Bold'), local(STSongti-TC-Bold);
   font-weight: bold;
   font-style: normal;
 }
 
 :root {
-  --zh-font: 'Noto Sans SC', 'Kagami SC';
-  --zh-font-serif: 'Noto Serif SC', 'Kagami SC';
-  --ja-font: 'Noto Sans JP', 'YuMincho';
-  --ja-font-serif: 'Noto Serif JP', 'YuMincho';
-  --en-font: 'Roboto';
-  --en-font-serif: serif;
+  --zh-font: 'Noto Sans', 'Noto Sans SC', 'Kagami SC';
+  --zh-font-serif: 'Noto Sans Serif', 'Noto Serif SC', 'Kagami SC';
+  --ja-font: 'Noto Sans', 'Noto Sans JP', 'YuMincho';
+  --ja-font-serif: 'Noto Sans Serif', 'Noto Serif JP', 'YuMincho';
+  --en-font: 'Noto Sans', 'Roboto';
+  --en-font-serif: 'Noto Sans Serif';
   --mono-font: 'Source Code Pro';
 }
 
 @mixin font-sans {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 }
 
 @mixin font-serif($font-family-fallback: serif) {
-  font-family: "Crimson Text", $font-family-fallback;
+  font-family: 'Crimson Text', $font-family-fallback;
+}
+
+@mixin font-sans-zh-Hans($font-family-fallback: sans-serif) {
+  font-family: var(--zh-font), $font-family-fallback;
 }
 
 @mixin font-serif-zh-Hans($font-family-fallback: sans-serif) {
-  font-family: "Crimson Text", var(--zh-font-serif), $font-family-fallback;
+  font-family: 'Crimson Text', var(--zh-font-serif), $font-family-fallback;
 }
 
 @mixin font-serif-zh-Hant($font-family-fallback: sans-serif) {
-  font-family: "Crimson Text", var(--zh-font-serif), $font-family-fallback;
+  font-family: 'Crimson Text', var(--zh-font-serif), $font-family-fallback;
+}
+
+@mixin font-sans-ja($font-family-fallback: sans-serif) {
+  font-family: var(--ja-font), $font-family-fallback;
 }
 
 @mixin font-serif-ja($font-family-fallback: sans-serif) {
-  font-family: "Crimson Text", var(--ja-font-serif), $font-family-fallback;
+  font-family: 'Crimson Text', var(--ja-font-serif), $font-family-fallback;
 }
 
 @mixin font-monospace($font-family-fallback: monospace) {
-  font-family: var(--mono-font), Courier, Monaco, $font-family-fallback;
+  font-family: 'JetBrains Mono', var(--mono-font), Courier, Monaco;
 }
 
-@function font-size($factor: 1.0) {
+@function font-size($factor: 1) {
   @return $font-size * $factor;
 }
