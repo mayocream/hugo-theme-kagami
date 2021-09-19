@@ -4,9 +4,6 @@ date: 2021-09-19
 draft: false
 tags: ["preview", "Theme preview", "tag-3"]
 categories: ["Theme preview", "category-2", "category-3"]
-
-weight: 10
-mathjax: true
 ---
 
 > Based on [MarkdownPreview test.md](https://github.com/facelessuser/MarkdownPreview/blob/master/examples/test.md).

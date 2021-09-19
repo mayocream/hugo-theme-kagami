@@ -1,7 +1,7 @@
 ---
-title: 夜想曲 Lyrics – アリス(真野あゆみ)
-author: アリス(真野あゆみ)
-date: 2021-09-20
+title: "夜想曲 Lyrics - アリス(真野あゆみ)"
+author: "アリス(真野あゆみ)"
+date: "2021-09-20T00:00:00+08:00"
 typeface: serif
 ---
 
