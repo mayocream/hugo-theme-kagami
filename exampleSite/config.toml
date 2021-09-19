@@ -13,8 +13,8 @@ description = 'Text about my cool site'
 title = 'My cool site'
 
 [params.social]
-github = "https://github.com"
-twitter = "https://twitter.com"
+github = "mayocream"
+twitter = "ywwuyi"
 
 [[menu.main]]
 name = "About"
