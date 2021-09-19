@@ -16,8 +16,12 @@
   <meta name="author" content="{{ .Site.Author.name }}" />
   {{- end }}
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700|Press+Start+2P" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&family=Noto+Sans+SC:wght@100;300;400&family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+SC&family=Source+Code+Pro&display=swap" rel="stylesheet"> 
+
   {{- $slice := slice }}
-  
   {{- $customCSS := resources.Get "scss/custom.scss" | resources.ToCSS }}
   {{- if $customCSS }}
   {{- $slice = $slice | append ($customCSS | resources.Minify) }}
@@ -27,7 +31,6 @@
   {{- $slice = $slice | append (resources.Get "css/prism.css") }}
   {{- $bundleCSS := $slice | resources.Concat "bundle.css" }}
   {{- $bundleCSS = printf "%s?v=%d" $bundleCSS.RelPermalink now.Unix }}
-  <link rel="preload" as="style" href="{{ $bundleCSS | safeHTML }}" media="all">
   <link rel="stylesheet" href="{{ $bundleCSS | safeHTML }}" media="all">
 
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
