@@ -1,6 +1,6 @@
 <header class="post-header">
     <a class="site-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    <h1 class="post-title baseline-fix" itemprop="name headline">{{ replace (.Title | default "Posts") "​" "<wbr>" }}</h1>
+    <h1 class="post-title baseline-fix typeface-{{ .Params.typeface | default "fallback" }}" lang="{{ .Params.lang | default $.Site.LanguageCode | default "en-us" }}" itemprop="name headline">{{ replace (.Title | default "Posts") "​" "<wbr>" }}</h1>
   </header>
   
   {{ if ne .Page.Params.cover_url "" }}
