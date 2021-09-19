@@ -24,6 +24,7 @@
   {{- end }}
   
   {{- $slice = $slice | append (resources.Get "scss/kagami.scss" | resources.ToCSS) }}
+  {{- $slice = $slice | append (resources.Get "css/prism.css") }}
   {{- $bundleCSS := $slice | resources.Concat "bundle.css" }}
   {{- $bundleCSS = printf "%s?v=%d" $bundleCSS.RelPermalink now.Unix }}
   <link rel="preload" as="style" href="{{ $bundleCSS | safeHTML }}" media="all">

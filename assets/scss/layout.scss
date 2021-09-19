@@ -63,7 +63,7 @@ article {
     @include exdent-vertically(0.5 * $vspacing, "code");
 
     @media screen and (min-width: $content-width) {
-      @include exdent-horizontally(2 * $hspacing, "code");
+      @include exdent-horizontally(3 * $hspacing, "code");
     }
   }
 

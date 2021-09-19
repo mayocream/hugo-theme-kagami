@@ -1,11 +1,12 @@
 baseURL = "/"
 title = "Kagami Theme"
 author = "Mayo"
-paginate = 3
+paginate = 999
 languageCode = "zh-Hans"
 DefaultContentLanguage = "en"
 
 [params]
+mainSections = ["posts"]
 description = 'Text about my cool site'
 title = 'My cool site'
 
@@ -26,3 +27,6 @@ weight = 1
 [taxonomies]
 tag = "tags"
 series = "series"
+
+[markup.highlight]
+codeFences = false

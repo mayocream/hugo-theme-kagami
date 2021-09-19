@@ -3,4 +3,4 @@ build:
 	hugo --minify
 
 preview:
-	hugo server
+	hugo server -p 1314
