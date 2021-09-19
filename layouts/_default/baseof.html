@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+  {{- partial "head" . }}
+</html>
+<body>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {{- partial "header" . }}
+      {{- block "main" . }}{{ end }}
+    </div>
+    <!-- {% include retina-image.html %}
+    {% if site.mermaid or page.mermaid %}
+    {% include mermaid.html %}
+    {% endif %} -->
+  </main>
+  {{- partial "footer" . }}
+  {{- partial "font-fix" . }}
+</body>

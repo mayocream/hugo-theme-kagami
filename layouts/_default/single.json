@@ -1,8 +1,0 @@
-{{ dict
-    "title" .Title
-    "kind" .Kind
-    "content" (trim .RawContent "\n")
-    "isPost" true
-    "wordCount" .WordCount
-    | jsonify (dict "indent" "  ")
-}}

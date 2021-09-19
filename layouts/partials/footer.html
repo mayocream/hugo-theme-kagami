@@ -1,0 +1,33 @@
+<footer class="site-footer">
+
+    <div class="wrapper">
+      <div class="social-links">
+        {{ if .Site.Params.social.github }}
+        <a class="social-link social-github" href="https://github.com/{{ .Site.Params.social.github }}">
+          <i class="icon-github"></i>
+        </a>
+        {{ end }}
+
+        {{ if .Site.Params.social.twitter }}
+        <a class="social-link social-twitter" href="https://twitter.com/{{ .Site.Params.social.twitter }}">
+          <i class="icon-twitter"></i>
+        </a>
+        {{ end }}
+
+        {{ if .Site.Params.social.instagram }}
+        <a class="social-link social-instagram" href="https://instagram.com/{{ .Site.Params.social.instagram }}">
+          <i class="icon-instagram"></i>
+        </a>
+        {{ end }}
+
+        <a class="social-link social-rss" href="{{ "/feed.xml" | safeURL }}" target="_blank">
+          <i class="icon-rss"></i>
+        </a>
+      </div>
+      <div class="credits">
+        Theme KAGAMI by Kamikat
+      </div>
+    </div>
+  
+  </footer>
+  
