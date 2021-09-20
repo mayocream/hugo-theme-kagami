@@ -43,7 +43,8 @@ article {
   pre,
   hr,
   blockquote,
-  img:only-child {
+  figure,
+  > img:only-child {
     display: block;
     margin: $vspacing auto;
   }
