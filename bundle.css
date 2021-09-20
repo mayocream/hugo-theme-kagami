@@ -147,7 +147,8 @@ article ol,
 article pre,
 article hr,
 article blockquote,
-article img:only-child {
+article figure,
+article > img:only-child {
   display: block;
   margin: 32px auto; }
 
