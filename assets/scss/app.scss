@@ -1,0 +1,58 @@
+@import 'kagami';
+
+.darkmode--activated {
+  background-color: #000;
+  .post-item-link {
+    color: #999;
+  }
+  pre,
+  img {
+    opacity: 0.9;
+  }
+}
+body {
+  opacity: 0;
+  transition: opacity 1s;
+}
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 0.05em 0 0.1em;
+  vertical-align: -0.1em;
+}
+.post-layout {
+  .post-content {
+    @media screen and (min-width: $content-width) {
+      width: $content-width - $content-padding - $post-margin-width;
+    }
+  }
+
+  article {
+    width: 100%;
+    @media screen and (min-width: $content-width) {
+      width: $content-width - $content-padding - $post-margin-width;
+    }
+  }
+
+  display: flex;
+  aside {
+    overflow-x: visible;
+    display: none;
+    margin-left: 68px;
+    margin-top: 48px;
+    font-size: 0.875em;
+    @media screen and (min-width: $content-width) {
+      display: block;
+    }
+  }
+
+  .toc {
+    width: 300px;
+    overflow-y: hidden;
+    max-height: 89vh;
+    top: 48px;
+    a {
+      line-height: 1;
+    }
+  }
+}

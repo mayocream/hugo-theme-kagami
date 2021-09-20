@@ -1,27 +1,37 @@
 {{ define "main" }}
-<article class="post typeface-{{ .Params.typeface }}" lang="{{ .Params.lang | default $.Site.LanguageCode | default "en" }}" itemscope itemtype="http://schema.org/BlogPosting" >
-    
-    <div class="post-content" itemprop="articleBody">
-        {{ .Content }}
-    </div>
+<div class="post-layout">
+    <article class="post typeface-{{ .Params.typeface }}"
+        lang="{{ .Params.lang | default $.Site.LanguageCode | default " en" }}" itemscope
+        itemtype="http://schema.org/BlogPosting">
 
-    <footer class="post-footer">
-        <div class="post-meta">
-          <time datetime="{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">{{ .Date | time.Format ":date_medium" }}</time>
-          {{ if .Params.author }} by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ .Params.author }}</span></span> {{ end }}
+        <div class="post-content" itemprop="articleBody">
+            {{ .Content }}
         </div>
-    
-        {{- if .Params.tags }}
-        <ul class="post-tags" aria-label="TagList">
-            {{- range (.GetTerms "tags") }}
-            <li><a class="tag-link" href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-            {{- end }}
-        </ul>
-        {{- end}}
 
-    </footer>
+        <footer class="post-footer">
+            <div class="post-meta">
+                <time datetime="{{ .Date.Format " 2006-01-02" }}" itemprop="datePublished">{{ .Date | time.Format
+                    ":date_medium" }}</time>
+                {{ if .Params.author }} by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span
+                        itemprop="name">{{ .Params.author }}</span></span> {{ end }}
+            </div>
 
-</article>
+            {{- if .Params.tags }}
+            <ul class="post-tags" aria-label="TagList">
+                {{- range (.GetTerms "tags") }}
+                <li><a class="tag-link" href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+                {{- end }}
+            </ul>
+            {{- end}}
+
+        </footer>
+
+    </article>
+    {{ if .Params.toc }}
+        {{- partial "toc" . }}
+    {{ end }}
+</div>
+
 {{- partial "highlight" . }}
 {{- partial "mermaid" . }}
 {{ end }}
