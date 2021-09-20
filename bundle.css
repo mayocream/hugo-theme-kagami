@@ -1,4 +1,4 @@
-.darkmode--activated{background-color:#000}.darkmode--activated .post-item-link{color:#999}.darkmode--activated pre,.darkmode--activated img{opacity:.9}body{opacity:0;transition:opacity 1s}img.emoji{height:1em;width:1em;margin:0 .05em 0 .1em;vertical-align:-.1em}/*
+/*
 * Scut, a collection of Sass utilities
 * to ease and improve our implementations of common style-code patterns.
 * v1.4.0
@@ -639,6 +639,51 @@ article hr {
   display: inline-block;
   vertical-align: top;
   font-size: 0.95em; }
+
+.darkmode--activated {
+  background-color: #000; }
+  .darkmode--activated .post-item-link {
+    color: #999; }
+  .darkmode--activated pre,
+  .darkmode--activated img {
+    opacity: 0.9; }
+
+body {
+  opacity: 0;
+  transition: opacity 1s; }
+
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 0.05em 0 0.1em;
+  vertical-align: -0.1em; }
+
+.post-layout {
+  display: flex; }
+  @media screen and (min-width: 680px) {
+    .post-layout .post-content {
+      width: 632px; } }
+  .post-layout article {
+    width: 100%; }
+    @media screen and (min-width: 680px) {
+      .post-layout article {
+        width: 632px; } }
+  .post-layout aside {
+    overflow-x: visible;
+    display: none;
+    margin-left: 68px;
+    margin-top: 48px;
+    font-size: 0.875em; }
+    @media screen and (min-width: 680px) {
+      .post-layout aside {
+        display: block; } }
+  .post-layout .toc {
+    width: 300px;
+    overflow-y: hidden;
+    max-height: 89vh;
+    top: 48px; }
+    .post-layout .toc a {
+      line-height: 1; }
 @font-face {
   font-family: 'JetBrains Mono';
   src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold-Italic.woff2')

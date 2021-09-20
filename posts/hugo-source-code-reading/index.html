@@ -5,12 +5,13 @@
 <title>Hugo 源码阅读 - Kagami Theme</title>
 <meta name=description content="WIP 一、概述 1.1 目录结构 &mldr; 二、程序流程 2.1 流程定义 2.1.1 错误状态码 func main() { resp := commands.Execute(os.Args[1:]) if resp.Err != nil { if resp.IsUserError() { resp.Cmd.Println(&#34;&#34;) resp.Cmd.Println(resp.Cmd.UsageString()) } os.Exit(-1) } } os.Exit(-1) 程序的退出状态码不在 0~255 之间，会自动做转换，">
 <meta name=author content>
+<link rel=preconnect href=https://cdn.jsdelivr.net>
 <link rel=preconnect href=https://fonts.googleapis.com>
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700|Press+Start+2P" rel=stylesheet>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&family=Noto+Sans+JP:wght@300;400&family=Noto+Sans+SC:wght@300;400&family=Noto+Serif:wght@300;400&family=Noto+Serif+JP:wght@300;400&family=Noto+Serif+SC:wght@300;400&family=Source+Code+Pro:wght@300;400" rel=stylesheet>
-<link rel=stylesheet href="/hugo-theme-kagami/bundle.css?v=1632110111" media=all>
-<link rel=apple-touch-icon href=/apple-touch-icon.png>
+<link rel=stylesheet href="/hugo-theme-kagami/bundle.css?v=1632120034" media=all>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/tocbot/dist/tocbot.css>
 <link rel=icon href=/favicon.ico><meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://mayocream.github.io/hugo-theme-kagami/posts/hugo-source-code-reading/><meta property="og:title" content="Hugo 源码阅读">
 <meta property="og:description" content="WIP 一、概述 1.1 目录结构 &mldr; 二、程序流程 2.1 流程定义 2.1.1 错误状态码 func main() { resp := commands.Execute(os.Args[1:]) if resp.Err != nil { if resp.IsUserError() { resp.Cmd.Println(&#34;&#34;) resp.Cmd.Println(resp.Cmd.UsageString()) } os.Exit(-1) } } os.Exit(-1) 程序的退出状态码不在 0~255 之间，会自动做转换，">
@@ -36,6 +37,7 @@
 </div>
 <div class=cover-meta></div>
 </div>
+<div class=post-layout>
 <article class="post typeface-sans" lang=zh itemscope itemtype=http://schema.org/BlogPosting>
 <div class=post-content itemprop=articleBody>
 <blockquote>
@@ -911,10 +913,16 @@ type verr struct {
 </div>
 <footer class=post-footer>
 <div class=post-meta>
-<time datetime=2020-12-10 itemprop=datePublished>Dec 10, 2020</time>
+<time datetime=" 2020-12-10" itemprop=datePublished>Dec 10, 2020</time>
 </div>
 </footer>
-</article><script src=https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js></script>
+</article>
+<script src=https://cdn.jsdelivr.net/npm/tocbot/dist/tocbot.min.js></script>
+<aside class=typeface-sans lang=zh>
+<nav class=toc></nav>
+</aside>
+<script>tocbot.init({tocSelector:'.toc',contentSelector:'article',headingSelector:'h1, h2, h3, h4, h5',hasInnerContainers:!0,collapseDepth:"3",positionFixedSelector:".toc",headingsOffset:10})</script>
+</div><script src=https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/filter-highlight-all/prism-filter-highlight-all.min.js></script>
 <script src=https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js></script>
 <script>Prism.plugins.filterHighlightAll.add(function(a){return a.language!=="mermaid"})</script>
