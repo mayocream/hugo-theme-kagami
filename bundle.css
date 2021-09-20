@@ -441,10 +441,20 @@ article em {
 article strong {
   font-weight: bold; }
 
-article a,
+article a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 2px solid #CBF8DF;
+  box-shadow: inset 0 -4px 0 #CBF8DF;
+  background: transparent;
+  transition: background 150ms ease; }
+
 article a:hover,
+article a:focus {
+  background: #CBF8DF; }
+
 article a:visited {
-  border-bottom: 1px dotted currentColor; }
+  opacity: .9; }
 
 article ul,
 article ol {
