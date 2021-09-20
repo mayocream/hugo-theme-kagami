@@ -132,10 +132,22 @@ article {
     font-weight: bold;
   }
 
-  a,
+  a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 2px solid #CBF8DF;
+    box-shadow: inset 0 -4px 0 #CBF8DF;
+    background: transparent;
+    transition: background 150ms ease;
+  }
+
   a:hover,
+  a:focus {
+    background: #CBF8DF;
+  }
+
   a:visited {
-    border-bottom: 1px dotted currentColor;
+    opacity: .9;
   }
 
   img.half-size,
