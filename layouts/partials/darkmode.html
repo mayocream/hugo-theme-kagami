@@ -14,10 +14,16 @@
     autoMatchOsTheme: true, // default: true
   }
 
-  window.darkmode = new Darkmode(opts)
+  let darkmode
+
   if (window.matchMedia('only screen and (min-width: 680px)').matches) {
-    window.darkmode.showWidget()
+    darkmode = new Darkmode(opts)
+    darkmode.showWidget()
+  } else {
+    localStorage.removeItem('darkmode')
+    darkmode = new Darkmode(opts)
   }
+  window.darkmode = darkmode
   document.addEventListener('DOMContentLoaded', function () {
     document.body.style.opacity = 1
   })
