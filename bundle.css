@@ -690,9 +690,9 @@ img.emoji {
         display: block; } }
 .toc {
   width: 300px;
-  overflow-y: hidden;
+  overflow-y: hidden !important;
   max-height: 89vh;
-  top: 48px; }
+  top: 48px !important; }
   .toc a {
     line-height: 1; }
 
