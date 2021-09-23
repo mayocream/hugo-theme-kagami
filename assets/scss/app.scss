@@ -57,15 +57,14 @@ img.emoji {
   }
 }
 
-.toc-link::before {
-  background-color: transparent !important;
-}
-
 .darkmode--activated {
+  .toc-link::before {
+    background-color: #000;
+  }
   .is-active-link::before {
-    background-color: #340720 !important;
+    background-color: #340720;
   }
   .toc a {
-    color: #ddd;
+    color: #ccc;
   }
 }
