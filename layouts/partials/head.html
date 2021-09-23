@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="{{ $bundleCSS | safeHTML }}" media="all">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot/dist/tocbot.css">
 
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" href="{{ .Site.Params.favicon_url | default "/favicon.ico" }}" />
 
   {{- hugo.Generator }}
 
