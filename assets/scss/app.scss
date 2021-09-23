@@ -49,9 +49,9 @@ img.emoji {
 
 .toc {
   width: 300px;
-  overflow-y: hidden;
+  overflow-y: hidden !important;
   max-height: 89vh;
-  top: 48px;
+  top: 48px !important;
   a {
     line-height: 1;
   }
