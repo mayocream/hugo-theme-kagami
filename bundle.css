@@ -688,13 +688,22 @@ img.emoji {
     @media screen and (min-width: 680px) {
       .post-layout aside {
         display: block; } }
-  .post-layout .toc {
-    width: 300px;
-    overflow-y: hidden;
-    max-height: 89vh;
-    top: 48px; }
-    .post-layout .toc a {
-      line-height: 1; }
+.toc {
+  width: 300px;
+  overflow-y: hidden;
+  max-height: 89vh;
+  top: 48px; }
+  .toc a {
+    line-height: 1; }
+
+.toc-link::before {
+  background-color: transparent !important; }
+
+.darkmode--activated .is-active-link::before {
+  background-color: #340720 !important; }
+
+.darkmode--activated .toc a {
+  color: #ddd; }
 @font-face {
   font-family: 'JetBrains Mono';
   src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold-Italic.woff2')
