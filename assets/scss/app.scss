@@ -45,14 +45,27 @@ img.emoji {
       display: block;
     }
   }
+}
 
-  .toc {
-    width: 300px;
-    overflow-y: hidden;
-    max-height: 89vh;
-    top: 48px;
-    a {
-      line-height: 1;
-    }
+.toc {
+  width: 300px;
+  overflow-y: hidden;
+  max-height: 89vh;
+  top: 48px;
+  a {
+    line-height: 1;
+  }
+}
+
+.toc-link::before {
+  background-color: transparent !important;
+}
+
+.darkmode--activated {
+  .is-active-link::before {
+    background-color: #340720 !important;
+  }
+  .toc a {
+    color: #ddd;
   }
 }
