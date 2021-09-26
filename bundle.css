@@ -704,6 +704,10 @@ img.emoji {
 
 .darkmode--activated .toc a {
   color: #ccc; }
+
+figcaption {
+  font-style: italic;
+  text-align: center; }
 @font-face {
   font-family: 'JetBrains Mono';
   src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold-Italic.woff2')
