@@ -709,8 +709,11 @@ figcaption {
   font-style: italic;
   text-align: center; }
 
+.language-mermaid {
+  text-align: center; }
+
 code > svg {
-  text-align: center;
+  margin-top: 20px;
   margin-bottom: 20px; }
 @font-face {
   font-family: 'JetBrains Mono';
