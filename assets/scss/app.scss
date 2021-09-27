@@ -74,7 +74,11 @@ figcaption {
   text-align: center;
 }
 
-code > svg {
+.language-mermaid {
   text-align: center;
+}
+
+code > svg {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
