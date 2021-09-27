@@ -709,8 +709,8 @@ figcaption {
   font-style: italic;
   text-align: center; }
 
-.language-mermaid {
-  text-align: center; }
+code.language-mermaid {
+  text-align: center !important; }
 
 code > svg {
   margin-top: 20px;
