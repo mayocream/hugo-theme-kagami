@@ -10,7 +10,7 @@
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700|Press+Start+2P" rel=stylesheet>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&family=Noto+Sans+JP:wght@300;400&family=Noto+Sans+SC:wght@300;400&family=Noto+Serif:wght@300;400&family=Noto+Serif+JP:wght@300;400&family=Noto+Serif+SC:wght@300;400&family=Source+Code+Pro:wght@300;400" rel=stylesheet>
-<link rel=stylesheet href="/hugo-theme-kagami/bundle.css?v=1632725942" media=all>
+<link rel=stylesheet href="/hugo-theme-kagami/bundle.css?v=1634282199" media=all>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/tocbot/dist/tocbot.css>
 <link rel=icon href=/favicon.ico><meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://mayocream.github.io/hugo-theme-kagami/posts/hugo-source-code-reading/><meta property="og:title" content="Hugo 源码阅读">
@@ -104,7 +104,7 @@ type cmder interface {
 </code></pre>
 <p>
 <figure class=image>
-<img src alt loading=lazy>
+<img src=images/hugo-impl.png alt loading=lazy>
 </figure></p>
 <pre><code class=language-go>// commands/commands.go
 func (b *commandsBuilder) addAll() *commandsBuilder {
@@ -552,7 +552,7 @@ func (q *EvictingStringQueue) PeekAllSet() map[string]bool {
 <h4 id=341-cli-自动补全>3.4.1 CLI 自动补全</h4>
 <p>
 <figure class=image>
-<img src alt loading=lazy>
+<img src=images/hugo-cli.png alt loading=lazy>
 </figure></p>
 <p>Hugo 的使用方式有两种：</p>
 <pre><code class=language-go>// &quot;-config&quot; flag 自动补全指定后缀文件名
