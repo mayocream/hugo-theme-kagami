@@ -1,6 +1,6 @@
 {{- $images := .Page.Resources.Match .Destination}}
 {{- $image := (index $images 0)}}
 <figure class="image">
-  <img src="{{ $image.RelPermalink | safeURL }}" alt="{{ .Text }}" loading="lazy" />
+  <img src="{{ $image.RelPermalink | default .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" />
   {{ if ne .Text "" }}<figcaption>{{ .Text }}</figcaption>{{ end }}
 </figure>
