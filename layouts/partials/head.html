@@ -18,16 +18,16 @@
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700|Press+Start+2P" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&family=Noto+Sans+JP:wght@300;400&family=Noto+Sans+SC:wght@300;400&family=Noto+Serif:wght@300;400&family=Noto+Serif+JP:wght@300;400&family=Noto+Serif+SC:wght@300;400&family=Source+Code+Pro:wght@300;400" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700|Press+Start+2P" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&family=Noto+Sans+JP:wght@300;400&family=Noto+Sans+SC:wght@300;400&family=Noto+Serif:wght@300;400&family=Noto+Serif+JP:wght@300;400&family=Noto+Serif+SC:wght@300;400&family=Source+Code+Pro:wght@300;400" rel="stylesheet">
 
   {{- $slice := slice }}
   {{- $customCSS := resources.Get "scss/custom.scss" }}
   {{- if $customCSS }}
   {{- $slice = $slice | append ($customCSS | resources.ToCSS | resources.Minify) }}
   {{- end }}
-  
+
   {{- $slice = $slice | append (resources.Get "scss/app.scss" | resources.ToCSS) }}
   {{- $slice = $slice | append (resources.Get "css/jetbrains-mono.css") }}
   {{- $slice = $slice | append (resources.Get "css/prism.css") }}
@@ -48,6 +48,5 @@
   {{ printf `<link rel="%s" type="%s" href="%s" hreflang="%s">` .Rel .MediaType.Type .Permalink ($.Site.LanguageCode | default "en-us") | safeHTML }}
   {{- end }}
 
-  {{- template "_internal/google_analytics_async.html" . }}
   {{- template "_internal/opengraph.html" . }}
 </head>
