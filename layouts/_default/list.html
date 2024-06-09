@@ -13,7 +13,7 @@
         <div class="post-item-cover" style="background-image: url('.Params.cover_url')"></div>
         {{- end }}
         <div class="post-item-label">
-            <a class="post-item-link baseline-fix" href="{{ .Permalink }}">
+            <a class="post-item-link baseline-fix" href="{{ .Params.externalLink | default .Permalink }}">
                 {{ .Title }}
             </a>
             {{- if ne .Description "" }}
